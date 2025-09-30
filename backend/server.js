@@ -10,7 +10,6 @@ import auth from "./routes/auth.js";
 const port = 3000;
 
 const allowedOrigins = [
-  "http://localhost:5173",
   "https://int4me.vercel.app"
 ];
 
