@@ -6,6 +6,7 @@ import React, {
   useRef,
 } from "react";
 import { io } from "socket.io-client";
+import API_BASE from "../config";
 
 export const DataContext = createContext();
 
@@ -18,7 +19,7 @@ export const DataProvider = ({ children }) => {
   const peerInstance = useRef(null);
 
   useEffect(() => {
-    const socket = io("http://localhost:3000", {
+    const socket = io(`${API_BASE}`, {
       withCredentials: true,
     });
 

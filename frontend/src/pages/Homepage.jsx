@@ -19,7 +19,7 @@ function Homepage() {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch(`${API_BASE}/api/logout`, {
+      const res = await fetch(`${API_BASE}/api/login`, {
         method: "POST",
         credentials: "include",
       });
