@@ -9,12 +9,17 @@ import auth from "./routes/auth.js";
 
 const port = 3000;
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://int4me.vercel.app"
+];
+
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
     // origin: "http://localhost:5173",
-    origin: "https://int4me.vercel.app",
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -28,7 +33,7 @@ app.use(cookieParser());
 app.use(
   cors({
     // origin: "http://localhost:5173",
-    origin: "https://int4me.vercel.app",
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true,
   })

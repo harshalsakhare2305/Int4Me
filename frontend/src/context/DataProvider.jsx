@@ -21,6 +21,7 @@ export const DataProvider = ({ children }) => {
   useEffect(() => {
     const socket = io(`${API_BASE}`, {
       withCredentials: true,
+      transports: ["websocket"], // force websockets (avoid polling issues)
     });
 
     setSocket(socket);
