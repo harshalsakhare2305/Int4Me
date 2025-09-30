@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(
   cors({
     // origin: "http://localhost:5173",
-    origin: "https://int4me.vercel.app/",
+    origin: "https://int4me.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   })

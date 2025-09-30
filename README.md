@@ -31,7 +31,7 @@ Int4Me is a mock interview platform designed to enhance interview preparation th
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/manthankhawse/Interview-Platform.git
+    git clone https://github.com/harshalsakhare2305/Int4Me
     cd Interview-Platform
     ```
 
