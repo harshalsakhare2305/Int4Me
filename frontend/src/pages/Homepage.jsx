@@ -10,6 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import InputModal from "../components/InputModal";
 import PopupModal from "../components/PopupModal";
+import API_BASE from "../config";
 
 function Homepage() {
   const { setUser, user } = useContext(DataContext);
@@ -18,7 +19,7 @@ function Homepage() {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/logout", {
+      const res = await fetch(`${API_BASE}/api/logout`, {
         method: "POST",
         credentials: "include",
       });

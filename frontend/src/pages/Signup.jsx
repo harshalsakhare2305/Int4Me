@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { DataContext } from "../context/DataProvider";
 import { Link, useNavigate } from "react-router-dom";
+import API_BASE from "../config";
 
 function Signup() {
   const { setUser } = useContext(DataContext);
@@ -12,7 +13,7 @@ function Signup() {
   const navigate = useNavigate();
   const handleSignup = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/register", {
+      const res = await fetch(`${API_BASE}/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
